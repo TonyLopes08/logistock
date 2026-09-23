@@ -1,0 +1,19 @@
+# Dados sensíveis (não subir para o GitHub)
+data/operacoes.json
+data/usuarios.json
+data/emails_pendentes.json
+data/clientes.json
+data/produtos.json
+
+# Dependências
+vendor/
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Editores
+.vscode/
+.idea/	

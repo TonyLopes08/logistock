@@ -1,0 +1,763 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    min-height: 100vh;
+    display: block;
+}
+
+/* ========= TELA DE LOGIN ========= */
+body.login-page {
+    background-color: #0b2b40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    color: #0b2b40;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.login-container .subtitle {
+    text-align: center;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.login-container label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-top: 12px;
+}
+.login-container input, .login-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.login-container button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #0b2b40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-container button:hover {
+    background-color: #1a4b66;
+}
+
+/* ========= HEADER FIXO ========= */
+.dashboard-header {
+    background-color: #0b2b40;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height: 70px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+.dashboard-header .user-badge {
+    background-color: #1f4d66;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* ========= CONTEÚDO DO DASHBOARD ========= */
+.dashboard-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+}
+
+.dashboard-content {
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    width: 100%;
+}
+
+.dashboard-content h3 {
+    color: #0b2b40;
+    margin-bottom: 10px;
+}
+.dashboard-content p {
+    margin-bottom: 20px;
+}
+
+/* ========= TABELAS ========= */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th {
+    background-color: #0b2b40;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    vertical-align: middle;
+}
+table tbody tr {
+    transition: background-color 0.12s;
+}
+table tbody tr:hover {
+    background-color: #f0f7fa;
+}
+
+/* ========= BOTÕES AUXILIARES ========= */
+.btn-primary {
+    background-color: #0b2b40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #1a4b66;
+}
+
+/* Badges de categoria */
+.badge-graos { background-color: #d4a017; color: white; padding: 4px 10px; border-radius: 12px; }
+.badge-madeira { background-color: #8B5A2B; color: white; padding: 4px 10px; border-radius: 12px; }
+.badge-eletronicos { background-color: #2a6b8a; color: white; padding: 4px 10px; border-radius: 12px; }
+.badge-alimentos { background-color: #2e8b57; color: white; padding: 4px 10px; border-radius: 12px; }
+
+/* ========= CARDS DE ESTATÍSTICA ========= */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.card-stat {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-left: 6px solid #0b2b40;
+    text-align: center;
+}
+.card-stat h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #0b2b40;
+}
+.card-stat p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ========= FORMULÁRIOS INTERNOS ========= */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+}
+
+.form-container h3 {
+    color: #0b2b40;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form-container label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #0b2b40;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 43, 64, 0.1);
+}
+
+.form-container button {
+    margin-top: 25px;
+    padding: 12px;
+    background: #0b2b40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-container button:hover {
+    background: #1a4b66;
+}
+
+/* Grid de 2 colunas para o formulário */
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.form-row > div {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Mensagens */
+.mensagem {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid #28a745;
+}
+.erro {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid #dc3545;
+}
+
+/* Badges de perfil */
+.perfil-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+.perfil-adm { background: #0b2b40; color: white; }
+.perfil-supervisor { background: #1a4b66; color: white; }
+.perfil-conferente { background: #28a745; color: white; }
+
+/* ========= NOTIFICAÇÕES NO HEADER ========= */
+.notif-badge {
+    background: #dc3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.notif-link {
+    background: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.notif-link:hover { background: #b02a37; }
+
+/* ========= ALERTA DE NOTIFICAÇÃO NO DASHBOARD ========= */
+.alerta-notificacao {
+    background: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.alerta-notificacao strong { color: #856404; }
+.alerta-notificacao p { margin: 5px 0 0; color: #856404; font-size: 14px; }
+.alerta-notificacao a {
+    color: #0b2b40;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ========= CARDS DE OPERAÇÃO ========= */
+.card-operacao {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-left: 6px solid #0b2b40;
+    transition: 0.2s;
+}
+.card-operacao:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-operacao strong {
+    color: #0b2b40;
+    font-size: 16px;
+}
+
+/* ========= STATUS (badges coloridas) ========= */
+.status-aberta {
+    background: #ffc107;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+.status-andamento {
+    background: #17a2b8;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+.status-aguardando {
+    background: #fd7e14;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+.status-finalizada {
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* ========= BOTÕES DE AÇÃO DOS CARDS ========= */
+.btn-conferir {
+    background: #0b2b40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.2s;
+}
+.btn-conferir:hover { background: #1a4b66; }
+
+.btn-packing {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.2s;
+}
+.btn-packing:hover { background: #1e7e34; }
+
+/* ========= BOTÃO NOVA OPERAÇÃO ========= */
+.btn-nova {
+    background: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+.btn-nova:hover { background: #1e7e34; }
+
+/* ========= ESTADO VAZIO ========= */
+.sem-operacoes {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+}
+.sem-operacoes span {
+    font-size: 14px;
+    display: block;
+    margin-top: 8px;
+}
+
+/* ========= CABEÇALHO DA OPERAÇÃO ========= */
+.header-op {
+    border-bottom: 3px solid #0b2b40;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.header-op h2 {
+    margin: 0;
+    color: #0b2b40;
+    font-size: 22px;
+}
+
+/* ========= BLOCO DE INFORMAÇÕES ========= */
+.info-op {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+.info-op > div {
+    padding: 10px 12px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #0b2b40;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.info-op strong {
+    display: block;
+    color: #666;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.info-op span {
+    display: block;
+    font-weight: bold;
+    color: #0b2b40;
+    font-size: 15px;
+}
+
+/* ========= CAMPOS INVÁLIDOS ========= */
+.campo-invalido {
+    border: 2px solid #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+.campo-invalido:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+.feedback-erro {
+    display: none;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* ========= BOTÃO DE VOLTAR PADRONIZADO ========= */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f4f8;
+    color: #0b2b40;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #d0d7de;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.btn-voltar:hover {
+    background: #0b2b40;
+    color: white;
+    border-color: #0b2b40;
+    transform: translateX(-3px);
+}
+
+.btn-voltar:focus {
+    outline: 3px solid rgba(11, 43, 64, 0.3);
+    outline-offset: 2px;
+}
+
+.btn-voltar .icone {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-voltar .texto {
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .btn-voltar .texto {
+        display: none;
+    }
+    .btn-voltar {
+        padding: 10px 14px;
+    }
+}
+
+/* ========= GRÁFICOS ========= */
+.grafico-container {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+.grafico-container canvas {
+    max-height: 100% !important;
+}
+
+/* ========= BARRA DE FILTROS ========= */
+.barra-filtros {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #17a2b8;
+}
+.filtros-linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+.filtros-linha > div {
+    flex: 1;
+    min-width: 140px;
+}
+.filtros-linha label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+}
+.filtros-linha input,
+.filtros-linha select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.filtros-botoes {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+.btn-filtrar {
+    background: #17a2b8;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-filtrar:hover { background: #138496; }
+.btn-limpar {
+    background: #f0f4f8;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+.btn-limpar:hover { background: #e0e6eb; }
+
+.filtros-extra {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #e0e0e0;
+}
+.btn-historico {
+    background: #0b2b40;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-historico:hover { background: #1a4b66; }
+.btn-historico.ativo { background: #ffc107; color: #333; }
+
+/* ========= BOTÕES DO HEADER ========= */
+.btn-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.2s;
+    color: white;
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+.btn-header:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-header.notif { background: rgba(253, 126, 20, 0.25); }
+.btn-header.notif:hover { background: #fd7e14; }
+.btn-header.perfil { background: rgba(23, 162, 184, 0.25); }
+.btn-header.perfil:hover { background: #17a2b8; }
+.btn-header.sair { background: rgba(220, 53, 69, 0.2); }
+.btn-header.sair:hover { background: #dc3545; }
+
+/* ========= BOTÕES DE AÇÃO NAS TABELAS ========= */
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.15s;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-right: 4px;
+}
+.btn-acao:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+.btn-acao.ver { background: #17a2b8; }
+.btn-acao.ver:hover { background: #138496; }
+.btn-acao.analisar { background: #0b2b40; }
+.btn-acao.analisar:hover { background: #1a4b66; }
+.btn-acao.arquivar { background: #28a745; }
+.btn-acao.arquivar:hover { background: #1e7e34; }
+.btn-acao.desarquivar { background: #6c757d; }
+.btn-acao.desarquivar:hover { background: #5a6268; }
+.btn-acao.pdf { background: #dc3545; }
+.btn-acao.pdf:hover { background: #b02a37; }
+.btn-acao.excluir { background: #dc3545; }
+.btn-acao.excluir:hover { background: #b02a37; }
+
+/* ========= BOTÕES SECUNDÁRIOS ========= */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.15s;
+    color: white;
+    background: #0b2b40;
+    border: none;
+    cursor: pointer;
+}
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    filter: brightness(1.15);
+}
+
+/* ========= INPUTS ========= */
+input[type="text"], input[type="email"], input[type="password"], 
+input[type="number"], select, textarea {
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #17a2b8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.15);
+}
+input:disabled {
+    background: #e9ecef;
+    cursor: not-allowed;
+    color: #666;
+}
