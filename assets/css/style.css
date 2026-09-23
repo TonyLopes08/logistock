@@ -761,3 +761,212 @@ input:disabled {
     cursor: not-allowed;
     color: #666;
 }
+
+
+/* ============================================================ */
+/* RESPONSIVIDADE - CELULAR E TABLET                             */
+/* ============================================================ */
+
+/* Tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .dashboard-header {
+        padding: 12px 15px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .dashboard-header h2 {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    .dashboard-header > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .user-badge {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .btn-header {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    .btn-header span:nth-child(2) {
+        display: none;
+    }
+
+    /* Conteúdo */
+    .dashboard-wrapper {
+        padding: 140px 10px 20px;
+    }
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+    .dashboard-content h3 {
+        font-size: 18px;
+    }
+
+    /* Cards de estatística - 2 por linha */
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    .card-stat {
+        padding: 12px 10px;
+    }
+    .card-stat h3 {
+        font-size: 22px;
+    }
+    .card-stat p {
+        font-size: 12px;
+    }
+
+    /* Gráficos - 1 por linha */
+    .grafico-container {
+        height: 200px;
+    }
+
+    /* Grid dos gráficos - empilha em 1 coluna */
+    [style*="grid-template-columns: repeat(auto-fit, minmax(280px"] {
+        grid-template-columns: 1fr !important;
+    }
+    [style*="grid-template-columns: repeat(auto-fit, minmax(150px"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Botões secundários - empilham */
+    [style*="display: flex; gap: 10px; flex-wrap: wrap"] {
+        flex-direction: column;
+    }
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Tabelas - rolagem horizontal */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    table {
+        min-width: 600px;
+    }
+    table th, table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+    .btn-acao {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    /* Filtros - empilham */
+    .barra-filtros {
+        padding: 15px;
+    }
+    .filtros-linha {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .filtros-linha > div {
+        min-width: 100%;
+    }
+    .filtros-botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-filtrar, .btn-limpar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Cards de operação (conferente) */
+    .card-operacao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-operacao > div:last-child {
+        width: 100%;
+    }
+    .card-operacao > div:last-child a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Info da operação (detalhes) - 2 colunas */
+    .info-op {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 12px;
+        gap: 10px;
+    }
+    .info-op > div {
+        padding: 8px;
+    }
+    .info-op span {
+        font-size: 13px;
+    }
+
+    /* Forms */
+    .form-row {
+        flex-direction: column;
+    }
+    .form-row > div {
+        min-width: 100%;
+    }
+
+    /* Item linha (detalhes) - empilha */
+    .item-linha {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+    .item-linha > div:last-child {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .item-linha .btn-acao {
+        flex: 1;
+        min-width: 60px;
+    }
+
+    /* Modal */
+    .modal-confirmacao, .modal-detalhes {
+        width: 95% !important;
+        padding: 20px !important;
+        max-height: 90vh !important;
+    }
+    .modal-detalhes > div:first-child h3 {
+        font-size: 16px !important;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr !important;
+    }
+    .info-op {
+        grid-template-columns: 1fr !important;
+    }
+    .dashboard-content {
+        padding: 15px 10px;
+    }
+    .btn-voltar .texto {
+        display: none;
+    }
+    .btn-voltar {
+        padding: 10px 12px;
+    }
+    .grafico-container {
+        height: 180px;
+    }
+    .notif-link {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}
