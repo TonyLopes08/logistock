@@ -77,7 +77,7 @@ foreach ($operacoes as $op) {
                 <div class="card-stat" style="border-left-color:#28a745;"><h3><?php echo $contagem['Finalizada']; ?></h3><p>Finalizadas</p></div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 25px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px;">
                 <div class="card-stat" style="padding: 20px;">
                     <h4 style="margin-top:0; color:#0b2b40; font-size:14px;">👥 Operações por Conferente</h4>
                     <div class="grafico-container"><canvas id="grafico-conferentes"></canvas></div>
